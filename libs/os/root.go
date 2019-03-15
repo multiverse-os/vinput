@@ -1,4 +1,11 @@
-package main
+package vinput
+
+import (
+	"fmt"
+	"os"
+	"os/exec"
+	"path/filepath"
+)
 
 func RunAsRoot() {
 	// Root is required because we are directly interacting with process memory

@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	vinput "github.com/multiverse-os/vinput"
+	os "github.com/multiverse-os/vinput/libs/os"
 )
 
 func main() {
@@ -14,6 +15,7 @@ func main() {
 	fmt.Println("testing.                                                                  ")
 	fmt.Println("===============================================================================")
 	fmt.Println("-------------------------------------------------------------------------------")
-
+	os.RunAsRoot()
 	keyboard := vinput.NewKeyboard()
+	defer keyboard.RemoveDevice()
 }
