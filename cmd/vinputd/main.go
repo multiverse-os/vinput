@@ -4,8 +4,11 @@ import (
 	"fmt"
 
 	vinput "github.com/multiverse-os/vinput"
-	os "github.com/multiverse-os/vinput/libs/os"
+
+	os "github.com/multiverse-os/vinput/os"
 )
+
+// TODO: THis is meant to be a long running service implementing vinput
 
 func main() {
 	fmt.Println("[ portal-gun ]: vinput ( virtual keyboard user input )")
@@ -18,4 +21,9 @@ func main() {
 	os.RunAsRoot()
 	keyboard := vinput.NewKeyboard()
 	defer keyboard.RemoveDevice()
+	// TODO Might as well tick if we got nothign else
+	select {}
+	for {
+
+	}
 }
