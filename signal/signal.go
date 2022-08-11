@@ -1,4 +1,4 @@
-package vinput
+package signal
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"syscall"
 )
 
-func NewSignalHandler() {
+func NewHandler() {
 	shutdownSignals := make(chan bool, 1)
 	go signalHandler(shutdownSignals)
 }

@@ -1,4 +1,4 @@
-package vinput
+package root
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 )
 
-func RunAsRoot() {
+func RunAs() {
 	// Root is required because we are directly interacting with process memory
 	if os.Geteuid() != 0 {
 		fmt.Println("[portal-gun: virtui] Creating a new keyboard requires root access, re-running the software with sudo: `sudo !!`.")

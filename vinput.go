@@ -3,7 +3,7 @@ package vinput
 import (
 	"fmt"
 
-	uinput "github.com/multiverse-os/vinput/libs/uinput"
+	uinput "github.com/multiverse-os/uinput"
 )
 
 type VirtualInput struct {
